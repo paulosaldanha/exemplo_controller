@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExemploController
 {
-    public class PessoaInput
+    /*public class PessoaInput
     {
         public long id {get; private set;}
         
@@ -18,5 +18,6 @@ namespace ExemploController
             this.id = id;
             this.nome = nome;
         }
-    }
+    }*/
+    public record PessoaInput(long id, [Required] [MinLength(3)]string nome);
 }
